@@ -1,37 +1,37 @@
 <LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/test_layout"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     android:orientation="vertical"
-    tools:context="es.tta.ejemplo_clase.MenuActivity">
-
+    tools:context="es.tta.ejemplo_clase.ExerciseActivity">
     <TextView
-        android:id="@+id/menu_login"
+        android:id="@+id/exercise_wording"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:gravity="center"
-        android:textSize="20dp"
-        android:text="@string/bienvenida"/>
-    <TextView
-        android:id="@+id/menu_leccion"
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:gravity="center"
-        android:textSize="20dp"
-        android:text="Lección1: Introducción a Android"/>
+        android:text="Explica como aplicarias el patron de diseño MVC en el desarrollo de una app para android"/>
     <Button
+        android:id="@+id/button_send_file"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:text="Nuevo test"
-        android:onClick="test"/>
+        android:text="Subir fichero"
+        android:onClick="sendFile"/>
     <Button
+        android:id="@+id/button_foto"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:text="Nuevo ejercicio"
-        android:onClick="ejercicio"/>
+        android:text="Sacar foto"
+        android:onClick="foto"/>
     <Button
+        android:id="@+id/button_audio"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:text="seguimiento"
-        android:onClick="seguimiento"/>
+        android:text="Grabar audio"
+        android:onClick="audio"/>
+    <Button
+        android:id="@+id/button_video"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="Grabar video"
+        android:onClick="video"/>
 </LinearLayout>

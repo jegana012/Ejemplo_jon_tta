@@ -1,11 +1,19 @@
 package es.tta.ejemplo_clase;
 
+import android.app.Activity;
+import android.content.Intent;
+import android.content.pm.PackageManager;
 import android.os.Bundle;
+import android.provider.MediaStore;
 import android.support.design.widget.FloatingActionButton;
 import android.support.design.widget.Snackbar;
+import android.support.v7.app.ActionBarActivity;
 import android.support.v7.app.AppCompatActivity;
 import android.support.v7.widget.Toolbar;
 import android.view.View;
+import android.widget.EditText;
+import android.widget.Toast;
+
 public class MainActivity extends ActionBarActivity {
     public final static String EXTRA_LOGIN = "es.tta.ejemplo_clase.login";
     public final static String EXTRA_PASSWR = "es.tta.ejemplo_clase.passwd";
@@ -22,7 +30,7 @@ public class MainActivity extends ActionBarActivity {
     public void recordAudio( View view)
     {
         if(!getPackageManager().hasSystemFeature(PackageManager.FEATURE_MICROPHONE))
-            Toast.makeText(this,R.string.no_micro,Toast.LENGTH_SHORT).show();
+            Toast.makeText(this, R.string.no_micro, Toast.LENGTH_SHORT).show();
         else{
             Intent intent =new Intent((MediaStore.Audio.Media.RECORD_SOUND_ACTION));
             if(intent.resolveActivity(getPackageManager()) !=null)

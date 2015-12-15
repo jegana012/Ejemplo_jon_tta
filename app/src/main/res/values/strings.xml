@@ -4,4 +4,14 @@
     <string name="title_activity_main">MainActivity</string>
     <string name="passwd_label">Contraseña</string>
     <string name="passwd_edit">Introduce la contraseña</string>
+    <string name="bienvenida">Bienvenido John Doe</string>
+    <string name="title_activity_test">TestActivity</string>
+    <string name="title_activity_exercise">ExerciseActivity</string>
+    <string name="button_send">Enviar</string>
+    <string name="pregunta1">¿Cuál de las siguientes opciones No se indica en el fichero de manifiesto de la app?</string>
+    <string name="respuesta11">Versión de la aplicación</string>
+    <string name="respuesta12">Listado de componentes de la aplicación</string>
+    <string name="respuesta13">Opciones del menú de ajustes</string>
+    <string name="respuesta14">Nivel mínimo de la API Android requerida</string>
+    <string name="respuesta15">Nombre del paquete java de la aplicación</string>
 </resources>

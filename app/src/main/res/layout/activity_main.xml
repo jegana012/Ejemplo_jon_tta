@@ -1,0 +1,34 @@
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+        android:orientation="vertical" android:layout_width="match_parent"
+        android:layout_height="match_parent">
+        <GridLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:columnCount="2">
+            <TextView
+                android:text="Usuario"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"/>
+            <EditText
+                android:id="@+id/login"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:hint="Introduce DNI"/>
+            <TextView
+                android:text="@string/passwd_label"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"/>
+            <EditText
+                android:id="@+id/passwd"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:hint="@string/passwd_edit"
+                android:password="true"/>
+
+        </GridLayout>
+        <Button
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="Acceder"
+            android:onClick="login"/>
+</LinearLayout>

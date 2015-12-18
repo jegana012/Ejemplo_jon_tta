@@ -14,4 +14,7 @@
     <string name="respuesta13">Opciones del menú de ajustes</string>
     <string name="respuesta14">Nivel mínimo de la API Android requerida</string>
     <string name="respuesta15">Nombre del paquete java de la aplicación</string>
+    <string name="title_activity_m">MActivity</string>
+    <string name="title_activity_froga">FrogaActivity</string>
+    <string name="title_activity_main2">Main2Activity</string>
 </resources>

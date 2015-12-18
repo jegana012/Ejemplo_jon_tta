@@ -29,7 +29,11 @@
         <activity
             android:name=".ExerciseActivity"
             android:label="@string/title_activity_exercise"
-            android:theme="@style/AppTheme.NoActionBar"></activity>
+            android:theme="@style/AppTheme.NoActionBar" />
+        <activity
+            android:name=".FrogaActivity"
+            android:label="@string/title_activity_froga"
+            android:theme="@style/AppTheme.NoActionBar" />
     </application>
 
 </manifest>

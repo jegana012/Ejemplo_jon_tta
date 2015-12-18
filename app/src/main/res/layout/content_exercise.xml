@@ -9,7 +9,46 @@
     android:paddingRight="@dimen/activity_horizontal_margin"
     android:paddingTop="@dimen/activity_vertical_margin"
     app:layout_behavior="@string/appbar_scrolling_view_behavior"
-    tools:context="es.tta.ejemplo_clase.ExerciseActivity"
+    tools:context="tta.es.adibide3_1.ExerciseActivity"
     tools:showIn="@layout/activity_exercise">
+
+
+    <LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+        xmlns:tools="http://schemas.android.com/tools"
+        android:id="@+id/test_layout"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:orientation="vertical"
+        tools:context="es.tta.ejemplo_clase.ExerciseActivity">
+        <TextView
+            android:id="@+id/exercise_wording"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="Explica como aplicarias el patron de diseño MVC en el desarrollo de una app para android"/>
+        <Button
+            android:id="@+id/button_send_file"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="Subir fichero"
+            android:onClick="sendFile"/>
+        <Button
+            android:id="@+id/button_foto"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="Sacar foto"
+            android:onClick="foto"/>
+        <Button
+            android:id="@+id/button_audio"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="Grabar audio"
+            android:onClick="audio"/>
+        <Button
+            android:id="@+id/button_video"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="Grabar video"
+            android:onClick="video"/>
+    </LinearLayout>
 
 </RelativeLayout>

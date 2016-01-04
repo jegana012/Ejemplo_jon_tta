@@ -22,39 +22,12 @@
         <TextView
             android:id="@+id/test_wording"
             android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:text="@string/pregunta1"/>
+            android:layout_height="wrap_content"/>
         <RadioGroup
             android:id="@+id/test_choices"
             android:layout_width="fill_parent"
             android:layout_height="wrap_content"
             android:orientation="vertical">
-            <RadioButton
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:id="@+id/respuesta11"
-                android:text="@string/respuesta11" />
-            <RadioButton
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:id="@+id/respuesta12"
-                android:text="@string/respuesta12" />
-            <RadioButton
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:id="@+id/respuesta13"
-                android:text="@string/respuesta13" />
-            <RadioButton
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:id="@+id/respuesta14"
-                android:text="@string/respuesta14" />
-            <RadioButton
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:id="@+id/respuesta15"
-                android:text="@string/respuesta15" />
-
         </RadioGroup>
         <Button
             android:id="@+id/button_send_test"
@@ -63,5 +36,12 @@
             android:layout_height="wrap_content"
             android:text="@string/button_send"
             android:onClick="send"/>
+        <Button
+            android:id="@+id/button_view_advice"
+            android:visibility="invisible"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="@string/button_advice"
+            android:onClick="showVideo"/>
     </LinearLayout>
 </RelativeLayout>

@@ -28,7 +28,6 @@ import java.io.IOException;
 public class TestActivity extends AppCompatActivity implements View.OnClickListener {
     int correct;
     private String advise="";
-    private String video="";
     private int advM;
 
     @Override
@@ -39,6 +38,7 @@ public class TestActivity extends AppCompatActivity implements View.OnClickListe
         setSupportActionBar(toolbar);
         Data data= new Data();
         Test test = data.getTest();
+        advise=test.getChoices().get(0).getAdvise();
         TextView textWording = (TextView) findViewById(R.id.test_wording);
         textWording.setText(test.getWording());
         RadioGroup group = (RadioGroup)findViewById(R.id.test_choices);
@@ -53,8 +53,7 @@ public class TestActivity extends AppCompatActivity implements View.OnClickListe
             i++;
 
         }
-        advise="http://www.surf30.net/";
-        video="file:///Tarjeta%20SD/VID-20151122-WA0008.mp4";
+
 
     }
 
@@ -103,7 +102,7 @@ public class TestActivity extends AppCompatActivity implements View.OnClickListe
 
     public void showVideo(View view){
         VideoView video = new VideoView(this);
-        video.setVideoURI(Uri.parse("file/mnt/Tarjeta%20SD/VID-20151122-WA0008.mp4"));
+        video.setVideoURI(Uri.parse(advise));
         ViewGroup.LayoutParams params =new ViewGroup.LayoutParams( ViewGroup.LayoutParams.MATCH_PARENT, ViewGroup.LayoutParams.MATCH_PARENT);
         video.setLayoutParams(params);
 

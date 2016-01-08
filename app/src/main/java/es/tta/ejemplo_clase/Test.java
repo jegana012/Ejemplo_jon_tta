@@ -13,8 +13,7 @@ public class Test {
     public String wording;
     public ArrayList<Choice> choices=new ArrayList<Choice>();
     public String getWording(){
-        //String question="¿Cuál de las siguientes opciones NO se indica en el fichero de manifiesto de la app?";
-        //return question;
+
         return wording;
     }
     public void setWording ( String wording){
@@ -26,40 +25,10 @@ public class Test {
        return choices;
 
    }
+    public void setChoices( ArrayList<Choice> choices){
 
-
-
-
-    /*public class Choice{
-        private int id;
-        private String opcion;
-        private boolean correcta;
-        private String advise;
-        private String adviseType;
-        public Choice(int id,String opcion, boolean correcta, String advise, String adviseType){
-            this.opcion=opcion;
-            this.correcta=correcta;
-            this.advise=advise;
-            this.adviseType=adviseType;
-
-        }
-
-
-        public String getOpcion(){
-            return opcion;
-        }
-
-        public boolean isCorrecta(){
-            return correcta;
-        }
-
-        public String getAdvise() {
-            return advise;
-        }
-        public String getAdviseType(){
-            return adviseType;
-        }
+        this.choices=choices;
     }
-*/
+
 }
 

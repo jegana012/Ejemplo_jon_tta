@@ -32,5 +32,14 @@ public class Choice {
     public String getAdviseType(){
         return adviseType;
     }
+    public void setOpcion( String opcion){
+        this.opcion=opcion;
+    }
+    public void setId ( int id){
+        this.id=id;
+    }
+    public void setCorrecta (boolean correcta){
+        this.correcta=correcta;
+    }
 
 }

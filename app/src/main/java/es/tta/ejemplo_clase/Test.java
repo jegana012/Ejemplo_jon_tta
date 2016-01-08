@@ -1,34 +1,49 @@
 package es.tta.ejemplo_clase;
 
+import java.util.ArrayList;
+
 /**
  * Created by jon on 18/12/15.
  */
 public class Test {
+
+    public final static int HTML_ADV=1;
+    public final static int VIDEO_ADV=2;
+    public final static int AUDIO_ADV=3;
+    public String wording;
+    public ArrayList<Choice> choices=new ArrayList<Choice>();
     public String getWording(){
-        String question="¿Cuál de las siguientes opciones NO se indica en el fichero de manifiesto de la app?";
-        return question;
+        //String question="¿Cuál de las siguientes opciones NO se indica en el fichero de manifiesto de la app?";
+        //return question;
+        return wording;
+    }
+    public void setWording ( String wording){
+        this.wording=wording;
     }
 
-    public Choice[]getChoices(){
-        Choice[]choices=new Choice[5];
-        choices[0]=new Choice ("Versión de aplicación",false);
-        choices[1]=new Choice("Listado de componentes de la aplicación",false);
-        choices[2]=new Choice ("Opciones del menú de ajustes",true);
-        choices[3]=new Choice("Nivel mínimo de la API Android requerida",false);
-        choices[4]=new Choice("Nombre del paquete java de la aplicación",false);
+    public ArrayList<Choice> getChoices(){
 
-        return choices;
+       return choices;
 
-    }
+   }
 
-    public class Choice{
+
+
+
+    /*public class Choice{
+        private int id;
         private String opcion;
         private boolean correcta;
-        public Choice(String opcion, boolean correcta){
+        private String advise;
+        private String adviseType;
+        public Choice(int id,String opcion, boolean correcta, String advise, String adviseType){
             this.opcion=opcion;
             this.correcta=correcta;
+            this.advise=advise;
+            this.adviseType=adviseType;
 
         }
+
 
         public String getOpcion(){
             return opcion;
@@ -37,7 +52,14 @@ public class Test {
         public boolean isCorrecta(){
             return correcta;
         }
-    }
 
+        public String getAdvise() {
+            return advise;
+        }
+        public String getAdviseType(){
+            return adviseType;
+        }
+    }
+*/
 }
 

@@ -29,6 +29,7 @@ public class TestActivity extends AppCompatActivity implements View.OnClickListe
     int correct;
     private String advise="";
     private String video="";
+    private int advM;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {//mirar los advices
@@ -42,7 +43,7 @@ public class TestActivity extends AppCompatActivity implements View.OnClickListe
         textWording.setText(test.getWording());
         RadioGroup group = (RadioGroup)findViewById(R.id.test_choices);
         int i=0;
-        for(Test.Choice choice : test.getChoices()){
+        for(Choice choice : test.getChoices()){
             RadioButton radio = new RadioButton(this);
             radio.setText(choice.getOpcion());
             radio.setOnClickListener(this);
@@ -53,7 +54,7 @@ public class TestActivity extends AppCompatActivity implements View.OnClickListe
 
         }
         advise="http://www.surf30.net/";
-        video="https://www.youtube.com/watch?v=Q4KkfiLRLdQ";
+        video="file:///Tarjeta%20SD/VID-20151122-WA0008.mp4";
 
     }
 
@@ -102,20 +103,20 @@ public class TestActivity extends AppCompatActivity implements View.OnClickListe
 
     public void showVideo(View view){
         VideoView video = new VideoView(this);
-        video.setVideoURI(Uri.parse("https://www.youtube.com/watch?v=Q4KkfiLRLdQ"));
+        video.setVideoURI(Uri.parse("file/mnt/Tarjeta%20SD/VID-20151122-WA0008.mp4"));
         ViewGroup.LayoutParams params =new ViewGroup.LayoutParams( ViewGroup.LayoutParams.MATCH_PARENT, ViewGroup.LayoutParams.MATCH_PARENT);
         video.setLayoutParams(params);
 
         MediaController controller = new MediaController(this){
             @Override
             public void hide(){
-            //para que no se esconda sobreescribimos el metodo
+
             }
             @Override
             public boolean dispatchKeyEvent(KeyEvent event){
                 if(event.getKeyCode() == KeyEvent.KEYCODE_BACK)
-                    finish();//cuando el usuario de a la tecla atars se finalice
-                return super.dispatchKeyEvent(event);//resto llamamos a los metodos de la clase
+                    finish();
+                return super.dispatchKeyEvent(event);
             }
         };
         controller.setAnchorView(video);
@@ -135,6 +136,22 @@ public class TestActivity extends AppCompatActivity implements View.OnClickListe
         LinearLayout layout =(LinearLayout)findViewById(R.id.test_layout);
         layout.addView(view);
         audioPlayer.start();
+
+    }
+
+    public void help (View view) throws IOException {
+        switch (advM){
+            case Test.HTML_ADV:
+                showHtml(view);
+                break;
+            case Test.AUDIO_ADV:
+                showAudio(view);
+                break;
+            case Test.VIDEO_ADV:
+                showVideo(view);
+                break;
+
+        }
 
     }
 
